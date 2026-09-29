@@ -9,7 +9,7 @@
   <meta property="og:title" content="Ostro Studio — Websites for Home Service Businesses" />
   <meta property="og:description" content="Fast websites for local businesses, live in 7 days and kept working every month." />
   <meta property="og:type" content="website" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230A0A0B'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%23F59E0B' stroke-width='4'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230A0A0B'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%236366F1' stroke-width='4'/%3E%3C/svg%3E" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,7 +22,7 @@
         extend: {
           colors: {
             ink: { DEFAULT: '#0A0A0B', 900: '#0F0F11', 800: '#141417', 700: '#1C1C20', 600: '#26262B' },
-            accent: { DEFAULT: '#F59E0B', 300: '#FCD34D', 400: '#FBBF24', 500: '#F59E0B', 600: '#EA7A0B' }
+            accent: { DEFAULT: '#6366F1', 300: '#C7D2FE', 400: '#818CF8', 500: '#6366F1', 600: '#4F46E5', 700: '#4338CA' }
           },
           fontFamily: {
             sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -36,7 +36,7 @@
 
   <style>
     body { background: #0A0A0B; -webkit-font-smoothing: antialiased; }
-    ::selection { background: #F59E0B; color: #0A0A0B; }
+    ::selection { background: #6366F1; color: #fff; }
 
     .grain::before {
       content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .05; mix-blend-mode: overlay;
@@ -50,15 +50,15 @@
       -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 30%, transparent 75%);
               mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 30%, transparent 75%);
     }
-    .glow { background: radial-gradient(closest-side, rgba(245,158,11,.28), rgba(245,158,11,0)); filter: blur(10px); }
-    .text-gradient { background: linear-gradient(100deg, #FDE68A 0%, #F59E0B 45%, #EA580C 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .glow { background: radial-gradient(closest-side, rgba(99,102,241,.26), rgba(99,102,241,0)); filter: blur(10px); }
+    .text-gradient { background: linear-gradient(100deg, #E0E7FF 0%, #A5B4FC 40%, #6366F1 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
     .card { background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.015)); border: 1px solid rgba(255,255,255,.08); }
     .card-hover { transition: border-color .3s ease, transform .3s ease, background .3s ease; }
-    .card-hover:hover { border-color: rgba(245,158,11,.35); transform: translateY(-3px); }
+    .card-hover:hover { border-color: rgba(99,102,241,.35); transform: translateY(-3px); }
     .ring-accent { position: relative; }
     .ring-accent::before {
       content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1px; pointer-events: none;
-      background: linear-gradient(160deg, rgba(245,158,11,.9), rgba(245,158,11,.1) 40%, rgba(255,255,255,.08));
+      background: linear-gradient(160deg, rgba(99,102,241,.9), rgba(99,102,241,.1) 40%, rgba(255,255,255,.08));
       -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
       -webkit-mask-composite: xor; mask-composite: exclude;
     }
@@ -77,14 +77,14 @@
     .faq-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .35s ease; }
     .faq-panel > div { overflow: hidden; }
     .faq-item.is-open .faq-panel { grid-template-rows: 1fr; }
-    .faq-item.is-open .faq-icon { transform: rotate(45deg); background: #F59E0B; color: #0A0A0B; border-color: #F59E0B; }
+    .faq-item.is-open .faq-icon { transform: rotate(45deg); background: #4F46E5; color: #fff; border-color: #4F46E5; }
 
     .pulse-dot { animation: pulse 2s ease-in-out infinite; }
-    @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(34,197,94,.5); } 50% { box-shadow: 0 0 0 6px rgba(34,197,94,0); } }
+    @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(129,140,248,.5); } 50% { box-shadow: 0 0 0 6px rgba(129,140,248,0); } }
 
     .field { width: 100%; background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.1); border-radius: .75rem; padding: .85rem 1rem; color: #fff; transition: border-color .2s, background .2s, box-shadow .2s; }
     .field::placeholder { color: rgba(255,255,255,.3); }
-    .field:focus { outline: none; border-color: #F59E0B; background: rgba(255,255,255,.05); box-shadow: 0 0 0 4px rgba(245,158,11,.12); }
+    .field:focus { outline: none; border-color: #6366F1; background: rgba(255,255,255,.05); box-shadow: 0 0 0 4px rgba(99,102,241,.12); }
     .field.is-invalid { border-color: #F87171; box-shadow: 0 0 0 4px rgba(248,113,113,.1); }
     select.field { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1.5l5 5 5-5' stroke='%23ffffff80' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
     select.field option { background: #141417; color: #fff; }
@@ -94,14 +94,14 @@
 </head>
 
 <body class="font-sans text-white/90 antialiased overflow-x-hidden">
-  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-ink">Skip to content</a>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:rounded-lg focus:bg-accent-600 focus:px-4 focus:py-2 focus:text-white">Skip to content</a>
 
   <!-- 1. NAV -->
   <header id="site-header" class="fixed inset-x-0 top-0 z-50 border-b border-transparent transition-all duration-300">
     <nav class="mx-auto flex h-16 md:h-20 max-w-site items-center justify-between px-5 md:px-8" aria-label="Primary">
       <a href="#top" class="group flex items-center gap-2.5" aria-label="Ostro Studio home">
         <svg class="h-8 w-8" viewBox="0 0 32 32" aria-hidden="true">
-          <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FCD34D"/><stop offset="1" stop-color="#EA580C"/></linearGradient></defs>
+          <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A5B4FC"/><stop offset="1" stop-color="#4F46E5"/></linearGradient></defs>
           <rect width="32" height="32" rx="9" fill="#141417" stroke="rgba(255,255,255,.1)"/>
           <circle cx="16" cy="16" r="7.5" fill="none" stroke="url(#lg)" stroke-width="3.5"/>
         </svg>
@@ -116,7 +116,7 @@
       </ul>
 
       <div class="flex items-center gap-3">
-        <a href="#contact" class="hidden rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-ink shadow-[0_0_0_1px_rgba(245,158,11,.4),0_8px_24px_-8px_rgba(245,158,11,.6)] transition hover:bg-accent-400 sm:inline-flex">Get a Quote</a>
+        <a href="#contact" class="hidden rounded-full bg-accent-600 px-5 py-2.5 text-sm font-semibold text-white shadow-[0_0_0_1px_rgba(99,102,241,.4),0_8px_24px_-8px_rgba(99,102,241,.6)] transition hover:bg-accent sm:inline-flex">Get a Quote</a>
         <button id="menu-toggle" type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-white md:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
           <svg id="icon-open" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
           <svg id="icon-close" class="hidden h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
@@ -130,7 +130,7 @@
         <li><a href="#packages" class="block py-3 font-display text-2xl font-semibold text-white/80 hover:text-white">Packages</a></li>
         <li><a href="#process" class="block py-3 font-display text-2xl font-semibold text-white/80 hover:text-white">Process</a></li>
         <li><a href="#faq" class="block py-3 font-display text-2xl font-semibold text-white/80 hover:text-white">FAQ</a></li>
-        <li class="pt-4 pb-2"><a href="#contact" class="flex w-full items-center justify-center rounded-full bg-accent px-5 py-3.5 font-semibold text-ink">Get a Quote</a></li>
+        <li class="pt-4 pb-2"><a href="#contact" class="flex w-full items-center justify-center rounded-full bg-accent-600 px-5 py-3.5 font-semibold text-white">Get a Quote</a></li>
       </ul>
     </div>
   </header>
@@ -140,12 +140,12 @@
     <section id="top" class="grain relative overflow-hidden pt-32 pb-20 md:pt-44 md:pb-32">
       <div class="grid-bg pointer-events-none absolute inset-0" aria-hidden="true"></div>
       <div class="glow pointer-events-none absolute -top-40 left-1/2 h-[600px] w-[900px] -translate-x-1/2" aria-hidden="true"></div>
-      <div class="pointer-events-none absolute -right-40 top-40 h-[400px] w-[400px] rounded-full bg-orange-600/10 blur-3xl" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -right-40 top-40 h-[400px] w-[400px] rounded-full bg-violet-500/10 blur-3xl" aria-hidden="true"></div>
 
       <div class="relative mx-auto max-w-site px-5 md:px-8">
         <div class="mx-auto max-w-4xl text-center">
           <p class="reveal inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[.03] px-4 py-1.5 text-xs font-medium uppercase tracking-[.18em] text-white/70">
-            <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
+            <span class="h-1.5 w-1.5 rounded-full bg-accent-600"></span>
             Websites for home service businesses
           </p>
           <h1 class="reveal mt-7 font-display text-[2.6rem] font-extrabold leading-[1.04] tracking-[-.035em] text-white sm:text-6xl md:text-7xl" data-delay="1">
@@ -155,7 +155,7 @@
             Your new site goes live in 7 days — designed around one job: turning visitors into quote requests. Then we host it, monitor it and update it, so it never falls behind again.
           </p>
           <div class="reveal mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row" data-delay="3">
-            <a href="#work" class="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent px-7 py-4 text-[15px] font-semibold text-ink shadow-[0_10px_40px_-10px_rgba(245,158,11,.7)] transition hover:bg-accent-400 sm:w-auto">
+            <a href="#work" class="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent-600 px-7 py-4 text-[15px] font-semibold text-white shadow-[0_10px_40px_-10px_rgba(99,102,241,.7)] transition hover:bg-accent sm:w-auto">
               See the demo
               <svg class="h-4 w-4 transition group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
@@ -164,7 +164,7 @@
             </a>
           </div>
           <p class="reveal mt-8 flex items-center justify-center gap-2.5 text-sm text-white/50" data-delay="3">
-            <span class="pulse-dot h-2 w-2 rounded-full bg-green-500"></span>
+            <span class="pulse-dot h-2 w-2 rounded-full bg-accent-400"></span>
             Live in 7 days <span class="text-white/25">·</span> Built to win quote requests
           </p>
         </div>
@@ -183,7 +183,7 @@
     <section id="problem" class="relative border-t border-white/5 py-24 md:py-32" aria-labelledby="problem-title">
       <div class="mx-auto max-w-site px-5 md:px-8">
         <div class="max-w-2xl">
-          <p class="reveal text-xs font-semibold uppercase tracking-[.2em] text-accent">The problem</p>
+          <p class="reveal text-xs font-semibold uppercase tracking-[.2em] text-accent-400">The problem</p>
           <h2 id="problem-title" class="reveal mt-4 font-display text-4xl font-bold tracking-tight text-white md:text-5xl" data-delay="1">Your website is losing you jobs.</h2>
           <p class="reveal mt-5 text-lg text-white/55" data-delay="2">Homeowners decide in seconds. If your site is slow, hidden or dated, they call the next company on the list — and you never even know they looked.</p>
         </div>
@@ -191,21 +191,21 @@
         <div class="mt-14 grid gap-5 md:grid-cols-3">
           <article class="reveal card card-hover rounded-2xl p-7 md:p-8" data-delay="1">
             <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/[.04]">
-              <svg class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="6.5"/><path stroke-linecap="round" d="M20 20l-4.2-4.2M8.5 11h5"/></svg>
+              <svg class="h-6 w-6 text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="6.5"/><path stroke-linecap="round" d="M20 20l-4.2-4.2M8.5 11h5"/></svg>
             </div>
             <h3 class="mt-6 font-display text-xl font-semibold text-white">Invisible on Google</h3>
             <p class="mt-3 leading-relaxed text-white/55">No local SEO, no service-area pages, no speed. When someone searches "plumber near me", your competitors show up and you don't.</p>
           </article>
           <article class="reveal card card-hover rounded-2xl p-7 md:p-8" data-delay="2">
             <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/[.04]">
-              <svg class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path stroke-linecap="round" d="M10.5 18.5h3M9.5 7h5M9.5 10h3"/></svg>
+              <svg class="h-6 w-6 text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path stroke-linecap="round" d="M10.5 18.5h3M9.5 7h5M9.5 10h3"/></svg>
             </div>
             <h3 class="mt-6 font-display text-xl font-semibold text-white">Quote button buried on mobile</h3>
             <p class="mt-3 leading-relaxed text-white/55">Most of your visitors are on a phone. If they have to pinch, zoom and scroll to find how to contact you, they won't.</p>
           </article>
           <article class="reveal card card-hover rounded-2xl p-7 md:p-8" data-delay="3">
             <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/[.04]">
-              <svg class="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 7v5l3 2"/></svg>
+              <svg class="h-6 w-6 text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 7v5l3 2"/></svg>
             </div>
             <h3 class="mt-6 font-display text-xl font-semibold text-white">Looks 10 years old</h3>
             <p class="mt-3 leading-relaxed text-white/55">A dated site makes a great business look risky. Customers judge your workmanship by your website before they ever meet you.</p>
@@ -220,17 +220,17 @@
       <div class="relative mx-auto max-w-site px-5 md:px-8">
         <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div class="max-w-2xl">
-            <p class="reveal text-xs font-semibold uppercase tracking-[.2em] text-accent">Our work</p>
+            <p class="reveal text-xs font-semibold uppercase tracking-[.2em] text-accent-400">Our work</p>
             <h2 id="work-title" class="reveal mt-4 font-display text-4xl font-bold tracking-tight text-white md:text-5xl" data-delay="1">See it before you buy it.</h2>
           </div>
-          <a href="{{DEMO_URL}}" target="_blank" rel="noopener" class="reveal inline-flex items-center gap-2 text-sm font-semibold text-white/70 transition hover:text-accent" data-delay="2">
+          <a href="{{DEMO_URL}}" target="_blank" rel="noopener" class="reveal inline-flex items-center gap-2 text-sm font-semibold text-white/70 transition hover:text-accent-400" data-delay="2">
             Open live demo
             <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></svg>
           </a>
         </div>
 
         <a href="{{DEMO_URL}}" target="_blank" rel="noopener" class="reveal group mt-12 block" aria-label="Open the live demo website in a new tab" data-delay="1">
-          <div class="ring-accent rounded-[1.6rem] bg-ink-800 p-2 shadow-[0_40px_120px_-30px_rgba(245,158,11,.35)] transition duration-500 group-hover:-translate-y-1 md:p-3">
+          <div class="ring-accent rounded-[1.6rem] bg-ink-800 p-2 shadow-[0_40px_120px_-30px_rgba(99,102,241,.35)] transition duration-500 group-hover:-translate-y-1 md:p-3">
             <!-- Browser chrome -->
             <div class="flex items-center gap-3 rounded-t-2xl border border-b-0 border-white/5 bg-ink-700 px-4 py-3">
               <div class="flex gap-1.5"><span class="h-3 w-3 rounded-full bg-white/15"></span><span class="h-3 w-3 rounded-full bg-white/15"></span><span class="h-3 w-3 rounded-full bg-white/15"></span></div>
@@ -246,7 +246,7 @@
               <div class="flex items-center justify-between border-b border-black/5 px-5 py-4 md:px-10">
                 <div class="flex items-center gap-2 font-display text-sm font-extrabold md:text-base"><span class="flex h-7 w-7 items-center justify-center rounded-md bg-[#1D3B8B] text-xs text-white">B</span> Brightline Plumbing</div>
                 <div class="hidden items-center gap-6 text-xs font-medium text-black/60 md:flex"><span>Services</span><span>Areas</span><span>Reviews</span><span>About</span></div>
-                <span class="rounded-full bg-[#F59E0B] px-3 py-1.5 text-[11px] font-bold text-[#12151C] md:px-4 md:text-xs">Get a free quote</span>
+                <span class="rounded-full bg-[#4F46E5] px-3 py-1.5 text-[11px] font-bold text-white md:px-4 md:text-xs">Get a free quote</span>
               </div>
               <div class="grid gap-8 px-5 py-10 md:grid-cols-5 md:px-10 md:py-16">
                 <div class="md:col-span-3">
@@ -265,7 +265,7 @@
                       <div class="h-9 rounded-md border border-black/10 bg-black/[.02]"></div>
                       <div class="h-9 rounded-md border border-black/10 bg-black/[.02]"></div>
                       <div class="h-16 rounded-md border border-black/10 bg-black/[.02]"></div>
-                      <div class="flex h-10 items-center justify-center rounded-md bg-[#F59E0B] text-xs font-bold">Send request →</div>
+                      <div class="flex h-10 items-center justify-center rounded-md bg-[#4F46E5] text-xs font-bold text-white">Send request →</div>
                     </div>
                     <p class="mt-3 text-center text-[10px] text-black/40">Reply within 1 business hour</p>
                   </div>
@@ -292,7 +292,7 @@
     <section id="packages" class="relative border-t border-white/5 py-24 md:py-32" aria-labelledby="packages-title">
       <div class="mx-auto max-w-site px-5 md:px-8">
         <div class="mx-auto max-w-2xl text-center">
-          <p class="reveal text-xs font-semibold uppercase tracking-[.2em] text-accent">Packages</p>
+          <p class="reveal text-xs font-semibold uppercase tracking-[.2em] text-accent-400">Packages</p>
           <h2 id="packages-title" class="reveal mt-4 font-display text-4xl font-bold tracking-tight text-white md:text-5xl" data-delay="1">Clear pricing. No surprises.</h2>
           <p class="reveal mt-5 text-lg text-white/55" data-delay="2">One build fee, one monthly care plan. Pick the size that fits your business today — upgrade any time.</p>
         </div>
@@ -305,27 +305,27 @@
             <p class="mt-8 flex items-baseline gap-2"><span class="font-display text-5xl font-bold tracking-tight text-white">$1,200</span></p>
             <p class="mt-2 text-sm text-white/50">+ <span class="font-semibold text-white/80">$99/mo</span> care plan</p>
             <ul class="mt-8 flex-1 space-y-3.5 border-t border-white/10 pt-8 text-[15px] text-white/70">
-              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 flex-none text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>One-page website</li>
-              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 flex-none text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Quote request form</li>
-              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 flex-none text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Mobile-first build</li>
+              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 flex-none text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>One-page website</li>
+              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 flex-none text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Quote request form</li>
+              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 flex-none text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Mobile-first build</li>
             </ul>
-            <a href="#contact" data-package="Launch" class="mt-10 inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3.5 text-sm font-semibold text-white transition hover:border-accent hover:text-accent">Choose Launch</a>
+            <a href="#contact" data-package="Launch" class="mt-10 inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3.5 text-sm font-semibold text-white transition hover:border-accent hover:text-accent-400">Choose Launch</a>
           </article>
 
           <!-- Growth -->
-          <article class="reveal ring-accent relative flex flex-col rounded-3xl bg-gradient-to-b from-[#1F1609] via-ink-800 to-ink-800 p-8 shadow-[0_30px_80px_-30px_rgba(245,158,11,.45)] lg:-my-4 lg:py-12" data-delay="2">
-            <span class="absolute -top-3.5 left-8 rounded-full bg-accent px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-ink">Most popular</span>
+          <article class="reveal ring-accent relative flex flex-col rounded-3xl bg-gradient-to-b from-[#12132E] via-ink-800 to-ink-800 p-8 shadow-[0_30px_80px_-30px_rgba(99,102,241,.45)] lg:-my-4 lg:py-12" data-delay="2">
+            <span class="absolute -top-3.5 left-8 rounded-full bg-accent-600 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-white">Most popular</span>
             <h3 class="font-display text-lg font-semibold text-white">Growth</h3>
             <p class="mt-1 text-sm text-white/45">The full site that earns trust.</p>
             <p class="mt-8 flex items-baseline gap-2"><span class="font-display text-5xl font-bold tracking-tight text-white">$2,000</span></p>
             <p class="mt-2 text-sm text-white/50">+ <span class="font-semibold text-white/80">$179/mo</span> care plan</p>
             <ul class="mt-8 flex-1 space-y-3.5 border-t border-white/10 pt-8 text-[15px] text-white/75">
-              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 flex-none text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Up to 5 pages</li>
-              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 flex-none text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Reviews section</li>
-              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 flex-none text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Basic SEO setup</li>
+              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 flex-none text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Up to 5 pages</li>
+              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 flex-none text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Reviews section</li>
+              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 flex-none text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Basic SEO setup</li>
               <li class="flex gap-3 text-white/50"><svg class="mt-0.5 h-5 w-5 flex-none text-white/30" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"/></svg>Everything in Launch</li>
             </ul>
-            <a href="#contact" data-package="Growth" class="mt-10 inline-flex items-center justify-center rounded-full bg-accent px-6 py-3.5 text-sm font-semibold text-ink transition hover:bg-accent-400">Choose Growth</a>
+            <a href="#contact" data-package="Growth" class="mt-10 inline-flex items-center justify-center rounded-full bg-accent-600 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-accent">Choose Growth</a>
           </article>
 
           <!-- Lead Engine -->
@@ -335,17 +335,17 @@
             <p class="mt-8 flex items-baseline gap-2"><span class="font-display text-5xl font-bold tracking-tight text-white">$3,000</span></p>
             <p class="mt-2 text-sm text-white/50">+ <span class="font-semibold text-white/80">$249/mo</span> care plan</p>
             <ul class="mt-8 flex-1 space-y-3.5 border-t border-white/10 pt-8 text-[15px] text-white/70">
-              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 flex-none text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Up to 8 pages</li>
-              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 flex-none text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Service-area pages</li>
-              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 flex-none text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Booking integration</li>
+              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 flex-none text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Up to 8 pages</li>
+              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 flex-none text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Service-area pages</li>
+              <li class="flex gap-3"><svg class="mt-0.5 h-5 w-5 flex-none text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg>Booking integration</li>
               <li class="flex gap-3 text-white/50"><svg class="mt-0.5 h-5 w-5 flex-none text-white/30" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"/></svg>Everything in Growth</li>
             </ul>
-            <a href="#contact" data-package="Lead Engine" class="mt-10 inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3.5 text-sm font-semibold text-white transition hover:border-accent hover:text-accent">Choose Lead Engine</a>
+            <a href="#contact" data-package="Lead Engine" class="mt-10 inline-flex items-center justify-center rounded-full border border-white/15 px-6 py-3.5 text-sm font-semibold text-white transition hover:border-accent hover:text-accent-400">Choose Lead Engine</a>
           </article>
         </div>
 
         <div class="reveal mx-auto mt-14 flex max-w-3xl items-start gap-4 rounded-2xl border border-white/10 bg-white/[.02] p-5 text-sm leading-relaxed text-white/60 md:items-center md:p-6">
-          <svg class="h-5 w-5 flex-none text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3z"/><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/></svg>
+          <svg class="h-5 w-5 flex-none text-accent-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3z"/><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/></svg>
           <p>Every package includes hosting, monitoring and monthly updates through the care plan. <span class="text-white/85">50% to start, 50% before launch.</span></p>
         </div>
       </div>
@@ -355,7 +355,7 @@
     <section id="process" class="relative border-t border-white/5 py-24 md:py-32" aria-labelledby="process-title">
       <div class="mx-auto max-w-site px-5 md:px-8">
         <div class="max-w-2xl">
-          <p class="reveal text-xs font-semibold uppercase tracking-[.2em] text-accent">Process</p>
+          <p class="reveal text-xs font-semibold uppercase tracking-[.2em] text-accent-400">Process</p>
           <h2 id="process-title" class="reveal mt-4 font-display text-4xl font-bold tracking-tight text-white md:text-5xl" data-delay="1">From kickoff to live in 7 days.</h2>
           <p class="reveal mt-5 text-lg text-white/55" data-delay="2">A tight, proven process. You spend about an hour of your time — we handle the rest.</p>
         </div>
@@ -363,25 +363,25 @@
         <ol class="relative mt-16 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           <div class="pointer-events-none absolute left-0 right-0 top-[3.25rem] hidden h-px bg-gradient-to-r from-accent/60 via-white/10 to-accent/60 lg:block" aria-hidden="true"></div>
           <li class="reveal card relative rounded-2xl p-7" data-delay="1">
-            <div class="relative flex h-12 w-12 items-center justify-center rounded-full border border-accent/40 bg-ink font-display text-lg font-bold text-accent">1</div>
+            <div class="relative flex h-12 w-12 items-center justify-center rounded-full border border-accent/40 bg-ink font-display text-lg font-bold text-accent-400">1</div>
             <p class="mt-6 text-xs font-semibold uppercase tracking-widest text-white/35">Day 1</p>
             <h3 class="mt-2 font-display text-xl font-semibold text-white">Intake</h3>
             <p class="mt-3 leading-relaxed text-white/55">You send your services, photos and service area. A short form — no long meetings.</p>
           </li>
           <li class="reveal card relative rounded-2xl p-7" data-delay="2">
-            <div class="relative flex h-12 w-12 items-center justify-center rounded-full border border-accent/40 bg-ink font-display text-lg font-bold text-accent">2</div>
+            <div class="relative flex h-12 w-12 items-center justify-center rounded-full border border-accent/40 bg-ink font-display text-lg font-bold text-accent-400">2</div>
             <p class="mt-6 text-xs font-semibold uppercase tracking-widest text-white/35">Day 3</p>
             <h3 class="mt-2 font-display text-xl font-semibold text-white">Draft</h3>
             <p class="mt-3 leading-relaxed text-white/55">Your first design is ready to review in 3 days, built on real content, not lorem ipsum.</p>
           </li>
           <li class="reveal card relative rounded-2xl p-7" data-delay="3">
-            <div class="relative flex h-12 w-12 items-center justify-center rounded-full border border-accent/40 bg-ink font-display text-lg font-bold text-accent">3</div>
+            <div class="relative flex h-12 w-12 items-center justify-center rounded-full border border-accent/40 bg-ink font-display text-lg font-bold text-accent-400">3</div>
             <p class="mt-6 text-xs font-semibold uppercase tracking-widest text-white/35">Days 4–6</p>
             <h3 class="mt-2 font-display text-xl font-semibold text-white">Review</h3>
             <p class="mt-3 leading-relaxed text-white/55">Two rounds of revisions to get every detail right — copy, colors, photos, layout.</p>
           </li>
           <li class="reveal relative rounded-2xl border border-accent/30 bg-gradient-to-b from-accent/10 to-transparent p-7" data-delay="3">
-            <div class="relative flex h-12 w-12 items-center justify-center rounded-full bg-accent font-display text-lg font-bold text-ink">4</div>
+            <div class="relative flex h-12 w-12 items-center justify-center rounded-full bg-accent-600 font-display text-lg font-bold text-white">4</div>
             <p class="mt-6 text-xs font-semibold uppercase tracking-widest text-accent/80">Day 7</p>
             <h3 class="mt-2 font-display text-xl font-semibold text-white">Launch</h3>
             <p class="mt-3 leading-relaxed text-white/60">Live in 7 days. Domain, hosting, forms and analytics — we handle everything.</p>
@@ -395,10 +395,10 @@
       <div class="pointer-events-none absolute -left-40 top-20 h-[500px] w-[500px] rounded-full bg-accent/10 blur-3xl" aria-hidden="true"></div>
       <div class="relative mx-auto grid max-w-site gap-14 px-5 md:px-8 lg:grid-cols-5 lg:gap-20">
         <div class="lg:col-span-2">
-          <p class="reveal text-xs font-semibold uppercase tracking-[.2em] text-accent">Why Ostro</p>
+          <p class="reveal text-xs font-semibold uppercase tracking-[.2em] text-accent-400">Why Ostro</p>
           <h2 id="why-title" class="reveal mt-4 font-display text-4xl font-bold tracking-tight text-white md:text-5xl" data-delay="1">Specialists, not generalists.</h2>
           <p class="reveal mt-5 text-lg text-white/55" data-delay="2">We don't build restaurant sites, portfolios or online stores. We build one thing, for one kind of business — and we're very good at it.</p>
-          <a href="#contact" class="reveal mt-8 inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent-300" data-delay="3">
+          <a href="#contact" class="reveal mt-8 inline-flex items-center gap-2 text-sm font-semibold text-accent-400 hover:text-accent-300" data-delay="3">
             Start your project
             <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
@@ -406,21 +406,21 @@
 
         <div class="space-y-4 lg:col-span-3">
           <article class="reveal card card-hover flex gap-6 rounded-2xl p-7" data-delay="1">
-            <span class="font-display text-sm font-bold text-accent">01</span>
+            <span class="font-display text-sm font-bold text-accent-400">01</span>
             <div>
               <h3 class="font-display text-xl font-semibold text-white">Built only for home services</h3>
               <p class="mt-2 leading-relaxed text-white/55">Plumbers, electricians, HVAC, cleaners, painters, roofers, landscapers. We know your customers, your jobs and what makes them pick up the phone.</p>
             </div>
           </article>
           <article class="reveal card card-hover flex gap-6 rounded-2xl p-7" data-delay="2">
-            <span class="font-display text-sm font-bold text-accent">02</span>
+            <span class="font-display text-sm font-bold text-accent-400">02</span>
             <div>
               <h3 class="font-display text-xl font-semibold text-white">Every page engineered for quote requests</h3>
               <p class="mt-2 leading-relaxed text-white/55">Sticky call and quote buttons, trust signals above the fold, short forms that actually get filled in. Pretty is the baseline — leads are the point.</p>
             </div>
           </article>
           <article class="reveal card card-hover flex gap-6 rounded-2xl p-7" data-delay="3">
-            <span class="font-display text-sm font-bold text-accent">03</span>
+            <span class="font-display text-sm font-bold text-accent-400">03</span>
             <div>
               <h3 class="font-display text-xl font-semibold text-white">One monthly plan covers everything</h3>
               <p class="mt-2 leading-relaxed text-white/55">Hosting, updates and uptime monitoring in a single care plan. No separate bills, no plugins breaking, no chasing a developer for a small change.</p>
@@ -434,9 +434,9 @@
     <section id="faq" class="relative border-t border-white/5 py-24 md:py-32" aria-labelledby="faq-title">
       <div class="mx-auto grid max-w-site gap-12 px-5 md:px-8 lg:grid-cols-3 lg:gap-20">
         <div>
-          <p class="reveal text-xs font-semibold uppercase tracking-[.2em] text-accent">FAQ</p>
+          <p class="reveal text-xs font-semibold uppercase tracking-[.2em] text-accent-400">FAQ</p>
           <h2 id="faq-title" class="reveal mt-4 font-display text-4xl font-bold tracking-tight text-white md:text-5xl" data-delay="1">Questions, answered.</h2>
-          <p class="reveal mt-5 text-white/55" data-delay="2">Still unsure? Email us at <a href="mailto:{{EMAIL}}" class="text-white underline decoration-accent/60 underline-offset-4 hover:decoration-accent">{{EMAIL}}</a>.</p>
+          <p class="reveal mt-5 text-white/55" data-delay="2">Still unsure? Email us at <a href="mailto:ostrostudiohq@gmail.com" class="text-white underline decoration-accent/60 underline-offset-4 hover:decoration-accent">ostrostudiohq@gmail.com</a>.</p>
         </div>
 
         <div class="reveal divide-y divide-white/10 border-y border-white/10 lg:col-span-2" id="faq-list">
@@ -491,17 +491,17 @@
       <div class="glow pointer-events-none absolute -bottom-40 left-1/2 h-[600px] w-[1000px] -translate-x-1/2" aria-hidden="true"></div>
       <div class="relative mx-auto grid max-w-site gap-14 px-5 md:px-8 lg:grid-cols-5 lg:gap-16">
         <div class="lg:col-span-2">
-          <p class="reveal text-xs font-semibold uppercase tracking-[.2em] text-accent">Contact</p>
+          <p class="reveal text-xs font-semibold uppercase tracking-[.2em] text-accent-400">Contact</p>
           <h2 id="contact-title" class="reveal mt-4 font-display text-4xl font-bold tracking-tight text-white md:text-6xl" data-delay="1">Get your quote.</h2>
           <p class="reveal mt-5 text-lg text-white/55" data-delay="2">Tell us about your business. We'll reply within one business day with a recommended package and a fixed price.</p>
           <ul class="reveal mt-10 space-y-4 text-white/70" data-delay="3">
-            <li class="flex items-center gap-3"><span class="flex h-6 w-6 items-center justify-center rounded-full bg-accent/15 text-accent"><svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Fixed price, no hourly billing</li>
-            <li class="flex items-center gap-3"><span class="flex h-6 w-6 items-center justify-center rounded-full bg-accent/15 text-accent"><svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Live in 7 days</li>
-            <li class="flex items-center gap-3"><span class="flex h-6 w-6 items-center justify-center rounded-full bg-accent/15 text-accent"><svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Working with businesses worldwide</li>
+            <li class="flex items-center gap-3"><span class="flex h-6 w-6 items-center justify-center rounded-full bg-accent/15 text-accent-400"><svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Fixed price, no hourly billing</li>
+            <li class="flex items-center gap-3"><span class="flex h-6 w-6 items-center justify-center rounded-full bg-accent/15 text-accent-400"><svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Live in 7 days</li>
+            <li class="flex items-center gap-3"><span class="flex h-6 w-6 items-center justify-center rounded-full bg-accent/15 text-accent-400"><svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Working with businesses worldwide</li>
           </ul>
           <div class="reveal mt-10 rounded-2xl border border-white/10 bg-white/[.02] p-5">
             <p class="text-xs uppercase tracking-widest text-white/40">Prefer email?</p>
-            <a href="mailto:{{EMAIL}}" class="mt-1 block font-display text-lg font-semibold text-white hover:text-accent">{{EMAIL}}</a>
+            <a href="mailto:ostrostudiohq@gmail.com" class="mt-1 block font-display text-lg font-semibold text-white hover:text-accent-400">ostrostudiohq@gmail.com</a>
           </div>
         </div>
 
@@ -509,22 +509,22 @@
           <form id="quote-form" class="card rounded-3xl p-6 backdrop-blur md:p-10" novalidate>
             <div class="grid gap-5 md:grid-cols-2">
               <div>
-                <label for="name" class="mb-2 block text-sm font-medium text-white/80">Your name <span class="text-accent">*</span></label>
+                <label for="name" class="mb-2 block text-sm font-medium text-white/80">Your name <span class="text-accent-400">*</span></label>
                 <input id="name" name="name" type="text" autocomplete="name" class="field" placeholder="Jordan Smith" required />
                 <p class="field-error mt-1.5 hidden text-sm text-red-400" data-for="name"></p>
               </div>
               <div>
-                <label for="business" class="mb-2 block text-sm font-medium text-white/80">Business name <span class="text-accent">*</span></label>
+                <label for="business" class="mb-2 block text-sm font-medium text-white/80">Business name <span class="text-accent-400">*</span></label>
                 <input id="business" name="business" type="text" autocomplete="organization" class="field" placeholder="Smith Plumbing Co." required />
                 <p class="field-error mt-1.5 hidden text-sm text-red-400" data-for="business"></p>
               </div>
               <div>
-                <label for="email" class="mb-2 block text-sm font-medium text-white/80">Email <span class="text-accent">*</span></label>
+                <label for="email" class="mb-2 block text-sm font-medium text-white/80">Email <span class="text-accent-400">*</span></label>
                 <input id="email" name="email" type="email" autocomplete="email" class="field" placeholder="you@business.com" required />
                 <p class="field-error mt-1.5 hidden text-sm text-red-400" data-for="email"></p>
               </div>
               <div>
-                <label for="trade" class="mb-2 block text-sm font-medium text-white/80">Trade <span class="text-accent">*</span></label>
+                <label for="trade" class="mb-2 block text-sm font-medium text-white/80">Trade <span class="text-accent-400">*</span></label>
                 <select id="trade" name="trade" class="field" required>
                   <option value="" selected disabled>Select your trade</option>
                   <option>Plumbing</option>
@@ -546,7 +546,7 @@
                 <p class="field-error mt-1.5 hidden text-sm text-red-400" data-for="website"></p>
               </div>
               <div class="md:col-span-2">
-                <label for="message" class="mb-2 block text-sm font-medium text-white/80">What you need <span class="text-accent">*</span></label>
+                <label for="message" class="mb-2 block text-sm font-medium text-white/80">What you need <span class="text-accent-400">*</span></label>
                 <textarea id="message" name="message" rows="5" class="field resize-y" placeholder="Services you offer, areas you cover, which package interests you…" required></textarea>
                 <p class="field-error mt-1.5 hidden text-sm text-red-400" data-for="message"></p>
               </div>
@@ -556,7 +556,7 @@
 
             <div class="mt-8 flex flex-col-reverse items-start justify-between gap-5 sm:flex-row sm:items-center">
               <p class="text-xs text-white/40">We'll never share your details. Reply within 1 business day.</p>
-              <button id="submit-btn" type="submit" class="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent px-8 py-4 text-[15px] font-semibold text-ink shadow-[0_10px_40px_-10px_rgba(245,158,11,.7)] transition hover:bg-accent-400 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto">
+              <button id="submit-btn" type="submit" class="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent-600 px-8 py-4 text-[15px] font-semibold text-white shadow-[0_10px_40px_-10px_rgba(99,102,241,.7)] transition hover:bg-accent disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto">
                 <span id="submit-label">Send my quote request</span>
                 <svg class="h-4 w-4 transition group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
               </button>
@@ -584,7 +584,7 @@
         <a href="#process" class="text-white/55 hover:text-white">Process</a>
         <a href="#faq" class="text-white/55 hover:text-white">FAQ</a>
         <a href="#contact" class="text-white/55 hover:text-white">Get a Quote</a>
-        <a href="mailto:{{EMAIL}}" class="text-white/55 hover:text-white">{{EMAIL}}</a>
+        <a href="mailto:ostrostudiohq@gmail.com" class="text-white/55 hover:text-white">ostrostudiohq@gmail.com</a>
       </nav>
     </div>
     <div class="mx-auto mt-12 flex max-w-site flex-col gap-2 border-t border-white/5 px-5 pt-8 text-xs text-white/35 sm:flex-row sm:justify-between md:px-8">
@@ -601,7 +601,7 @@
        Leave as-is and the form falls back to opening an email draft.
        ============================================================ */
     const FORM_ENDPOINT = '{{FORM_ENDPOINT}}';
-    const CONTACT_EMAIL = '{{EMAIL}}';
+    const CONTACT_EMAIL = 'ostrostudiohq@gmail.com';
 
     (function () {
       'use strict';
@@ -723,7 +723,7 @@
 
       const showStatus = (type, text) => {
         statusEl.className = 'mt-6 rounded-xl border px-4 py-3 text-sm ' + (type === 'success'
-          ? 'border-green-500/30 bg-green-500/10 text-green-300'
+          ? 'border-emerald-500/30 bg-emerald-500/10 text-emerald-300'
           : 'border-red-500/30 bg-red-500/10 text-red-300');
         statusEl.textContent = text;
       };
