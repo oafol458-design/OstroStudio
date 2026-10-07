@@ -621,9 +621,10 @@
   <script>
     /* ============================================================
        FORM BACKEND
-       Set this to your form service endpoint (e.g. Formspree, Basin,
-       Getform, or your own API). Submissions are POSTed as JSON.
-       Leave as-is and the form falls back to opening an email draft.
+       Paste the "Ostro Leads" Apps Script web app URL (ends in /exec).
+       Requests are POSTed form-encoded and saved to the Ostro Leads
+       Google Sheet, with an email alert. Until it's set, the form
+       falls back to opening an email draft.
        ============================================================ */
     const FORM_ENDPOINT = '{{FORM_ENDPOINT}}';
     const CONTACT_EMAIL = 'ostrostudiohq@gmail.com';
@@ -784,12 +785,11 @@
         submitBtn.disabled = true;
         submitLabel.textContent = 'Sending…';
         try {
-          const res = await fetch(FORM_ENDPOINT, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-            body: JSON.stringify(data)
-          });
+          // Form-encoded (not JSON) so the browser skips the CORS preflight Apps Script can't answer
+          const res = await fetch(FORM_ENDPOINT, { method: 'POST', body: new URLSearchParams(data) });
           if (!res.ok) throw new Error('Request failed');
+          const result = await res.json().catch(() => ({ ok: true }));
+          if (result.ok === false) throw new Error(result.error || 'Rejected');
           form.reset();
           showStatus('success', 'Thanks — your request is in. We\'ll reply within one business day.');
           submitLabel.textContent = 'Sent ✓';
