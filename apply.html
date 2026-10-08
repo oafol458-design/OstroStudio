@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apply — Sales Representative | Ostro Studio</title>
+<meta name="description" content="Apply to join Ostro Studio as a full-time, remote Sales Representative. About 5 minutes.">
+<link rel="canonical" href="https://ostrostudio.com/apply">
+<meta name="theme-color" content="#09090B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230A0A0B'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%236366F1' stroke-width='4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: one question per screen, left-aligned column, progress bar on top, nav bottom-right. Matches ostrostudio.com: near-black, indigo glow, faint grid, pill buttons. */
+:root{
+  --bg:#09090B; --panel:#121217; --panel-2:#17171F; --fg:#F5F5F7; --muted:#9A9AA6;
+  --accent:#5B50F0; --accent-hi:#7C72FF; --accent-ink:#FFFFFF; --lav:#B7BCF8;
+  --line:rgba(255,255,255,.10); --line-2:rgba(255,255,255,.18);
+  --sel:rgba(91,80,240,.16); --glow:rgba(91,80,240,.28); --err:#FF8A8A;
+  --display:"Manrope", "Segoe UI", system-ui, sans-serif;
+  --body:"Inter", "Segoe UI", system-ui, sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased;
+  background-image:
+    radial-gradient(ellipse 60% 45% at 50% -8%, var(--glow), transparent 70%),
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size:100% 100%, 56px 56px, 56px 56px;background-attachment:fixed}
+.bar{position:fixed;top:0;left:0;right:0;height:3px;background:var(--line);z-index:5}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--lav),var(--accent));box-shadow:0 0 12px var(--accent);transition:width .35s ease}
+.brand{position:fixed;top:20px;left:28px;display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:16px;color:var(--fg);letter-spacing:-.01em}
+.brand .mark{width:28px;height:28px;border-radius:8px;background:var(--panel-2);border:1px solid var(--line);display:grid;place-items:center}
+.brand .mark{position:relative;overflow:hidden}
+.brand .mark img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.brand .mark i{width:13px;height:13px;border-radius:50%;border:2.5px solid var(--accent-hi);box-shadow:0 0 8px var(--accent)}
+.brand span{color:var(--muted);font-weight:500;font-size:14px;padding-left:10px;border-left:1px solid var(--line-2)}
+.brand{text-decoration:none;z-index:6}
+.back{position:fixed;top:22px;right:28px;z-index:6;color:var(--muted);font-size:14px;text-decoration:none}
+.back:hover{color:var(--fg)}
+main{min-height:100%;display:flex;align-items:center;justify-content:center;padding:96px 28px 120px}
+.q{width:100%;max-width:680px;animation:in .45s cubic-bezier(.2,.7,.2,1)}
+.q.back{animation-name:inback}
+@keyframes in{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes inback{from{opacity:0;transform:translateY(-28px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.q{animation:none}.bar i{transition:none}}
+.num{display:inline-flex;align-items:center;gap:8px;color:var(--lav);font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;
+  border:1px solid var(--line-2);border-radius:999px;padding:4px 12px;background:rgba(255,255,255,.02)}
+.num::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent-hi)}
+h1,h2{font-family:var(--display);text-wrap:balance;margin:0 0 14px;line-height:1.12;letter-spacing:-.025em}
+h1{font-size:clamp(36px,6.4vw,60px);font-weight:800}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--lav),var(--accent-hi));-webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:clamp(24px,3.6vw,32px);font-weight:700}
+h2 .req{color:var(--accent-hi)}
+.help{color:var(--muted);margin:0 0 28px;max-width:62ch}
+.help a{color:var(--lav)}
+.pay{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0 0 28px;border:1px solid var(--line-2);border-radius:14px;background:rgba(18,18,23,.8);overflow:hidden}
+.pay div{padding:16px 14px;text-align:center}
+.pay div+div{border-left:1px solid var(--line)}
+.pay small{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:4px}
+.pay strong{font-family:var(--display);font-size:26px;font-weight:700;font-variant-numeric:tabular-nums}
+.pay span{font-size:13px;color:var(--muted)}
+input[type=text],input[type=email],input[type=tel],input[type=url],textarea{
+  width:100%;background:transparent;border:0;border-bottom:2px solid var(--line-2);color:var(--fg);
+  font:inherit;font-size:clamp(20px,3vw,26px);padding:8px 0;outline:none;border-radius:0}
+textarea{resize:vertical;min-height:120px;font-size:19px;line-height:1.5;background:var(--panel);border:1px solid var(--line-2);border-radius:12px;padding:14px 16px}
+input:focus{border-bottom-color:var(--accent-hi)}
+textarea:focus{border-color:var(--accent-hi);box-shadow:0 0 0 3px var(--sel)}
+::placeholder{color:rgba(245,245,247,.3)}
+.opts{display:flex;flex-direction:column;gap:10px;max-width:480px}
+.opt{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:var(--panel);color:var(--fg);
+  border:1px solid var(--line-2);border-radius:12px;padding:12px 16px;font:inherit;font-size:17px;cursor:pointer;transition:background .15s,border-color .15s,box-shadow .15s}
+.opt:hover{border-color:var(--accent-hi);background:var(--panel-2)}
+.opt:focus-visible,.btn:focus-visible,.nav button:focus-visible{outline:2px solid var(--accent-hi);outline-offset:2px}
+.opt kbd{flex:none;display:inline-grid;place-items:center;width:26px;height:26px;border:1px solid var(--line-2);border-radius:7px;font:600 12px var(--body);color:var(--muted)}
+.opt[aria-pressed=true]{background:var(--sel);border-color:var(--accent-hi);box-shadow:0 0 0 1px var(--accent-hi) inset}
+.opt[aria-pressed=true] kbd{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.opt .tick{margin-left:auto;opacity:0;color:var(--accent-hi);font-weight:700}
+.opt[aria-pressed=true] .tick{opacity:1}
+.row{display:flex;align-items:center;gap:16px;margin-top:28px;flex-wrap:wrap}
+.btn{background:var(--accent);color:var(--accent-ink);border:0;border-radius:999px;padding:13px 26px;font:600 16px var(--body);cursor:pointer;
+  box-shadow:0 8px 28px -8px var(--accent), 0 0 0 1px rgba(255,255,255,.08) inset;transition:background .15s,transform .15s}
+.btn:hover{background:var(--accent-hi);transform:translateY(-1px)}
+.btn[disabled]{opacity:.55;cursor:default;transform:none}
+.hint{color:var(--muted);font-size:13px}
+.hint b{color:var(--fg);font-weight:600}
+.err{color:var(--err);font-size:15px;min-height:22px;margin-top:12px}
+.check{display:flex;gap:12px;align-items:flex-start;cursor:pointer;max-width:560px;color:var(--fg);background:var(--panel);border:1px solid var(--line-2);border-radius:12px;padding:16px}
+.check input{width:20px;height:20px;accent-color:var(--accent);margin-top:3px;flex:none}
+.nav{position:fixed;right:24px;bottom:24px;display:flex;border:1px solid var(--line-2);border-radius:999px;overflow:hidden;background:var(--panel)}
+.nav button{width:46px;height:40px;background:transparent;color:var(--fg);border:0;font-size:16px;cursor:pointer}
+.nav button+button{border-left:1px solid var(--line-2)}
+.nav button:hover:not([disabled]){background:var(--accent);color:var(--accent-ink)}
+.nav button[disabled]{opacity:.35;cursor:default}
+.facts{display:flex;flex-wrap:wrap;gap:12px 40px;margin:0 0 24px;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.facts div{min-width:0}.facts dt{color:var(--muted);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
+.facts dd{margin:0;font-family:var(--display);font-weight:600;font-size:17px}
+.note{color:var(--muted);font-size:15px;margin:0}
+.drop{position:relative;display:flex;flex-direction:column;align-items:center;gap:6px;max-width:560px;padding:28px 20px;text-align:center;cursor:pointer;
+  background:var(--panel);border:1.5px dashed var(--line-2);border-radius:14px;transition:border-color .15s,background .15s}
+.drop:hover,.drop:focus-within{border-color:var(--accent-hi);background:var(--panel-2)}
+.drop input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.drop-ico{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--sel);color:var(--accent-hi);font-weight:700;font-size:18px}
+.drop-text{font-size:17px}.drop-text b{color:var(--lav);font-weight:600}
+.drop-sub{color:var(--muted);font-size:13px}
+.or{color:var(--muted);font-size:14px;margin:22px 0 4px}
+ul.list{margin:0 0 28px;padding:0;list-style:none;color:var(--muted);display:flex;flex-direction:column;gap:6px}
+ul.list li{display:flex;gap:10px;align-items:baseline}
+ul.list li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--accent-hi);transform:translateY(-2px)}
+@media (max-width:520px){
+  body{font-size:17px}
+  .pay{grid-template-columns:1fr}
+  .pay div+div{border-left:0;border-top:1px solid var(--line)}
+  .brand{left:18px}.brand span{display:none}
+  main{padding-inline:18px}
+}
+</style>
+</head>
+<body>
+<div class="bar" aria-hidden="true"><i id="bar"></i></div>
+<a class="brand" href="index.html" aria-label="Ostro Studio home"><div class="mark"><i></i></div>Ostro Studio<span>Careers</span></a>
+<a class="back" href="careers.html">View the role</a>
+<!-- Honeypot: real people never see or fill this -->
+<input type="text" id="company_url" name="company_url" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+<main><section class="q" id="stage" aria-live="polite"></section></main>
+<div class="nav" id="nav">
+  <button id="prev" aria-label="Previous question">&#8593;</button>
+  <button id="next" aria-label="Next question">&#8595;</button>
+</div>
+
+<script>
+// "Ostro Hiring Form" Apps Script web app. Applications are POSTed here in the background
+// (form-encoded, so no CORS preflight) and saved to the Applicants sheet, Slack and Drive.
+var APPLY_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzzuR0zaGK4aQRRtOZvt7IJ1oXKQWkkyvoTW6uZYyQF8B_ua14aIHnE-TocF9MOuSYIjA/exec';
+
+var STEPS = [
+  {id:'welcome', type:'intro'},
+  {id:'name', type:'text', q:"Let's start with your full name.", ph:'Type your answer here…', req:true},
+  {id:'email', type:'email', q:'What is your email, {name}?', help:"We'll send next steps here.", ph:'name@example.com', req:true},
+  {id:'phone', type:'tel', q:'Your WhatsApp or phone number?', help:'Include your country code.', ph:'+1 …', req:true},
+  {id:'location', type:'text', q:'Where are you based?', help:'Country and city.', ph:'City, Country', req:true},
+  {id:'years', type:'choice', q:'How many years of sales experience do you have?', help:'Cold calling, appointment setting and closing all count.',
+    opts:['None','Less than 1 year','1–2 years','3–5 years','5+ years'], req:true},
+  {id:'experience', type:'multi', q:'Which of these have you done?', help:'Choose as many as you like.',
+    opts:['Cold calling','Appointment setting','Closing deals','B2B sales','Selling to US or Canadian clients','Selling websites, marketing or SaaS']},
+  {id:'crm', type:'multi', q:'Which CRMs have you used?', help:'Choose as many as you like.',
+    opts:['Close','HubSpot','GoHighLevel','Salesforce','Other','None']},
+  {id:'hours', type:'choice', q:'How many hours a day can you work?', help:'This is a full-time role, about 8 hours a day. You choose your schedule, but most of our clients are in the US and Canada, so calls happen during their business hours.',
+    opts:['Less than 4','4–6','6–8','8+'], req:true},
+  {id:'commission', type:'gate', q:'This role is commission-only. Are you OK with that?',
+    help:'No base salary or hourly wage. You earn 20% of every website you sell (30% for the rest of the month once you reach $10,000 in sales) and 10% of each client\'s monthly care plan for as long as they stay subscribed. Commissions are paid twice a week via Stripe or Wise.',
+    opts:['Yes','No'], req:true},
+  {id:'setup', type:'multi', q:'Which of these do you have right now?', help:'Choose all that apply.',
+    opts:['Stable internet (20 Mbps+)','A quiet place to take calls','A headset with a microphone','A laptop or desktop computer']},
+  {id:'win', type:'long', q:'Tell us about your sales experience.', help:'What have you sold, to who, and what results did you get? A few sentences is plenty.', req:true},
+  {id:'resume', type:'resume', q:'Add your resume.', help:'Upload a PDF or Word document (up to 5 MB). No file handy? Paste a link to it instead, such as Google Drive, Dropbox or LinkedIn.', ph:'https://…', req:true},
+  {id:'source', type:'choice', q:'How did you hear about this role?', opts:['Discord','Facebook','LinkedIn','Job board','A friend or referral','Other']},
+  {id:'start', type:'choice', q:'When could you start?', opts:['Right away','Within 1 week','Within 2 weeks','In a month or more'], req:true},
+  {id:'agree', type:'consent', q:'Last step.', help:'Please confirm and submit your application.'},
+  {id:'done', type:'end'},
+  {id:'notfit', type:'notfit'}
+];
+
+var A = {experience:[], crm:[], setup:[]};
+var idx = 0, dir = 1, hist = [];
+var stage = document.getElementById('stage');
+var LETTERS = 'ABCDEFGHIJ';
+
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+function firstName(){return (A.name||'').trim().split(/\s+/)[0]||'';}
+function questionCount(){return STEPS.filter(function(s){return ['intro','end','notfit'].indexOf(s.type)<0;}).length;}
+function qNumber(i){var n=0;for(var k=0;k<=i;k++){if(['intro','end','notfit'].indexOf(STEPS[k].type)<0)n++;}return n;}
+
+function render(){
+  var s = STEPS[idx];
+  var total = questionCount();
+  var pct = s.type==='intro'?0:(s.type==='end'||s.type==='notfit')?100:Math.round((qNumber(idx)-1)/total*100);
+  document.getElementById('bar').style.width = pct+'%';
+  document.getElementById('nav').hidden = (s.type==='intro'||s.type==='end'||s.type==='notfit');
+  document.getElementById('prev').disabled = hist.length===0;
+
+  stage.className = 'q'+(dir<0?' back':'');
+  void stage.offsetWidth;
+  var h = '';
+
+  if (s.type==='intro'){
+    h = '<div class="num">Now hiring · Remote</div><h1>Sales <em>Representative</em></h1>'+
+      '<p class="help">Thanks for your interest in joining Ostro Studio. This short application helps us get to know you before we schedule a call.</p>'+
+      '<dl class="facts"><div><dt>Location</dt><dd>Remote</dd></div><div><dt>Compensation</dt><dd>Commission-based</dd></div><div><dt>Time</dt><dd>About 5 minutes</dd></div></dl>'+
+      '<p class="note">Have your resume ready to upload (PDF or Word), or a link to it.</p>'+
+      '<div class="row"><button class="btn" id="go">Start application</button><span class="hint">press <b>Enter ↵</b></span></div>';
+  } else if (s.type==='end'){
+    h = '<h1>Thanks, '+esc(firstName())+'.</h1><p class="help">Your application is in. We review every application and resume ourselves. If it\'s a fit, you\'ll hear from us by email or WhatsApp within 3 business days to book a short voice interview.</p>';
+  } else if (s.type==='notfit'){
+    h = '<h1>Thanks for being upfront, '+esc(firstName())+'.</h1><p class="help">This role is commission-only, so it isn\'t the right fit right now. We\'ve kept your details and will reach out if a salaried role opens.</p>';
+  } else {
+    var title = s.q.replace('{name}', esc(firstName()));
+    h += '<div class="num">Question '+qNumber(idx)+' of '+questionCount()+'</div><h2>'+title+(s.req?' <span class="req">*</span>':'')+'</h2>';
+    if (s.help) h += '<p class="help">'+s.help+'</p>';
+    if (['text','email','tel','url'].indexOf(s.type)>-1){
+      var t = s.type==='text'?'text':s.type;
+      h += '<input id="f_'+s.id+'" type="'+t+'" autocomplete="'+({name:'name',email:'email',phone:'tel'}[s.id]||'off')+'" placeholder="'+(s.ph||'')+'" value="'+esc(A[s.id]||'')+'">';
+      h += '<div class="row"><button class="btn" id="ok">OK ✓</button><span class="hint">press <b>Enter ↵</b></span></div>';
+    } else if (s.type==='resume'){
+      var fileName = A.resumeFile ? A.resumeFile.name : '';
+      h += '<label class="drop" for="resume_file"><input type="file" id="resume_file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">'+
+        '<span class="drop-ico" aria-hidden="true">↑</span><span class="drop-text" id="drop_text">'+(fileName ? 'Attached: <b>'+esc(fileName)+'</b>. Click to change.' : '<b>Choose a file</b> or drag it here')+'</span>'+
+        '<span class="drop-sub">PDF or Word, up to 5 MB</span></label>';
+      h += '<p class="or">or paste a link</p><input id="f_resume" type="url" autocomplete="off" placeholder="'+(s.ph||'')+'" value="'+esc(A.resume||'')+'">';
+      h += '<div class="row"><button class="btn" id="ok">OK ✓</button><span class="hint">press <b>Enter ↵</b></span></div>';
+    } else if (s.type==='long'){
+      h += '<textarea id="f_'+s.id+'" placeholder="Type your answer here…">'+esc(A[s.id]||'')+'</textarea>';
+      h += '<div class="row"><button class="btn" id="ok">OK ✓</button><span class="hint"><b>Shift + Enter ↵</b> for a new line</span></div>';
+    } else if (s.type==='choice'||s.type==='gate'||s.type==='multi'){
+      var multi = s.type==='multi';
+      h += '<div class="opts" role="'+(multi?'group':'radiogroup')+'">';
+      s.opts.forEach(function(o,i){
+        var on = multi ? (A[s.id]||[]).indexOf(o)>-1 : A[s.id]===o;
+        h += '<button type="button" class="opt" data-v="'+esc(o)+'" aria-pressed="'+on+'"><kbd>'+LETTERS[i]+'</kbd>'+esc(o)+'<span class="tick">✓</span></button>';
+      });
+      h += '</div>';
+      if (multi) h += '<div class="row"><button class="btn" id="ok">OK ✓</button><span class="hint">press <b>Enter ↵</b></span></div>';
+    } else if (s.type==='consent'){
+      h += '<label class="check"><input type="checkbox" id="f_agree" '+(A.agree?'checked':'')+'><span>I confirm my answers are true, and I understand this is a full-time (about 8 hours a day, flexible schedule), remote, commission-only independent contractor role.</span></label>';
+      h += '<div class="row"><button class="btn" id="submit">Submit application</button><span class="hint">press <b>Ctrl + Enter ↵</b></span></div>';
+    }
+    h += '<div class="err" id="err" role="alert"></div>';
+  }
+  stage.innerHTML = h;
+  wire(s);
+}
+
+function wire(s){
+  var go = document.getElementById('go'); if (go){go.onclick=next; go.focus();}
+  var ok = document.getElementById('ok'); if (ok) ok.onclick=next;
+  var sub = document.getElementById('submit'); if (sub) sub.onclick=function(){ submit(false); };
+  var rf = document.getElementById('resume_file');
+  if (rf) rf.onchange = function(){ if (rf.files && rf.files[0]) attachResume(rf.files[0]); };
+  var f = document.getElementById('f_'+s.id);
+  if (f && f.focus && s.type!=='consent' && s.type!=='resume'){ setTimeout(function(){f.focus();},60); }
+  if (f) f.oninput = function(){ setErr(''); };
+  stage.querySelectorAll('.opt').forEach(function(b){
+    b.onclick = function(){ pick(s, b.getAttribute('data-v')); };
+  });
+}
+
+function pick(s, v){
+  setErr('');
+  if (s.type==='multi'){
+    var arr = A[s.id]||[]; var i = arr.indexOf(v);
+    if (v==='None') arr = (i>-1)?[]:['None'];
+    else { arr = arr.filter(function(x){return x!=='None';}); if (i>-1) arr.splice(arr.indexOf(v),1); else arr.push(v); }
+    A[s.id] = arr;
+    stage.querySelectorAll('.opt').forEach(function(b){ b.setAttribute('aria-pressed', arr.indexOf(b.getAttribute('data-v'))>-1); });
+  } else {
+    A[s.id] = v;
+    stage.querySelectorAll('.opt').forEach(function(b){ b.setAttribute('aria-pressed', b.getAttribute('data-v')===v); });
+    setTimeout(next, 280);
+  }
+}
+
+function setErr(m){ var e=document.getElementById('err'); if(e) e.textContent=m; }
+
+// Resume upload: read the file in the browser and send it with the application as base64
+var RESUME_MAX = 5 * 1024 * 1024, resumeReading = false;
+function attachResume(file){
+  setErr('');
+  var ok = /\.(pdf|docx?)$/i.test(file.name);
+  if (!ok){ setErr('Please upload a PDF or Word document.'); return; }
+  if (file.size > RESUME_MAX){ setErr('That file is over 5 MB. Try a smaller PDF, or paste a link instead.'); return; }
+  resumeReading = true;
+  var label = document.getElementById('drop_text');
+  if (label) label.innerHTML = 'Attaching <b>'+esc(file.name)+'</b>…';
+  var r = new FileReader();
+  r.onload = function(){
+    resumeReading = false;
+    A.resumeFile = { name: file.name, mimeType: file.type || 'application/octet-stream', data: String(r.result).split(',')[1] };
+    var l = document.getElementById('drop_text');
+    if (l) l.innerHTML = 'Attached: <b>'+esc(file.name)+'</b>. Click to change.';
+  };
+  r.onerror = function(){ resumeReading = false; setErr('We couldn\'t read that file. Try again, or paste a link instead.'); };
+  r.readAsDataURL(file);
+}
+
+function validate(s){
+  if (s.type==='resume'){
+    var link = document.getElementById('f_resume');
+    A.resume = link ? link.value.trim() : '';
+    if (resumeReading) return 'One moment, your file is still attaching…';
+    if (!A.resumeFile && !A.resume) return 'Please upload your resume or paste a link to it.';
+    if (A.resume && !/^https?:\/\/\S+\.\S+/i.test(A.resume)) return 'Paste the full link, starting with https://';
+    return '';
+  }
+  var f = document.getElementById('f_'+s.id);
+  if (f && s.type!=='consent') A[s.id] = f.value.trim();
+  var v = A[s.id];
+  if (s.req && (!v || (Array.isArray(v) && !v.length))) return s.type==='choice'||s.type==='gate' ? 'Please choose an option.' : 'Please fill this in.';
+  if (s.type==='email' && v && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v)) return 'That email doesn\'t look right. Check for typos.';
+  if (s.type==='url' && v && !/^https?:\/\/\S+\.\S+/i.test(v)) return 'Paste the full link, starting with https://';
+  if (s.type==='tel' && v && v.replace(/\D/g,'').length < 7) return 'Please enter a full phone number with country code.';
+  if (s.type==='long' && s.req && v.length < 40) return 'Give us a little more detail (a few sentences).';
+  return '';
+}
+
+function next(){
+  var s = STEPS[idx];
+  if (s.type!=='intro'){ var e = validate(s); if (e){ setErr(e); return; } }
+  if (s.id==='commission' && A.commission==='No'){ submit(true); return; }
+  hist.push(idx); dir = 1;
+  idx = STEPS.findIndex(function(x,i){return i>idx;});
+  render();
+}
+function prev(){ if(!hist.length) return; var s=STEPS[idx]; var f=document.getElementById('f_'+s.id); if(f&&s.type!=='consent') A[s.id]=f.value.trim(); dir=-1; idx=hist.pop(); render(); }
+
+function submit(notFit){
+  if (!notFit){
+    A.agree = document.getElementById('f_agree').checked;
+    if (!A.agree){ setErr('Please tick the box to confirm.'); return; }
+  }
+  var btn = document.getElementById('submit') || null;
+  if (btn){ btn.disabled = true; btn.textContent = 'Submitting…'; }
+  var done = function(){ hist=[]; dir=1; idx = STEPS.findIndex(function(x){return x.id===(notFit?'notfit':'done');}); render(); };
+  var fail = function(err){ if(btn){btn.disabled=false;btn.textContent='Submit application';} setErr('We couldn\'t submit that. Check your connection and try again, or email us at ostrostudiohq@gmail.com.'); console.error(err); };
+  var body = new URLSearchParams({ payload: JSON.stringify(A), company_url: document.getElementById('company_url').value });
+  fetch(APPLY_ENDPOINT, { method: 'POST', body: body })
+    .then(function(r){ if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function(j){ if (!j || !j.ok) throw new Error((j && j.error) || 'Rejected'); done(); })
+    .catch(fail);
+}
+
+document.getElementById('prev').onclick = prev;
+document.getElementById('next').onclick = next;
+document.addEventListener('keydown', function(e){
+  var s = STEPS[idx];
+  if (e.key==='Enter'){
+    if (s.type==='long' && e.shiftKey) return;
+    if (s.type==='consent'){ if (e.ctrlKey||e.metaKey){ e.preventDefault(); submit(); } return; }
+    if (s.type==='end'||s.type==='notfit') return;
+    if (document.activeElement && document.activeElement.classList.contains('opt')) return;
+    e.preventDefault(); next(); return;
+  }
+  if ((s.type==='choice'||s.type==='gate'||s.type==='multi') && /^[a-j]$/i.test(e.key) && !e.ctrlKey && !e.metaKey){
+    var i = LETTERS.indexOf(e.key.toUpperCase());
+    if (s.opts[i]) pick(s, s.opts[i]);
+  }
+});
+render();
+</script>
+</body>
+</html>
